@@ -5,7 +5,7 @@ var userClickedPattern = [];
 var startflag = false;
 var level = 0;
 
-$(document).keypress(function () {
+$(document).keydown(function () {
     if (!startflag) {
         $("#level-title").text("Level " + level);
         nextSequence();
@@ -59,7 +59,7 @@ function animatePress(name) {
 }
 
 function playsound(name) {
-    var audio = new Audio("./sounds/" + name + ".mp3");
+    var audio = new Audio("sounds/" + name + ".mp3");
     audio.play();
 }
 
